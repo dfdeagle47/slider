@@ -9,7 +9,7 @@ const Track = ({ className, included, vertical, offset, length }) => {
     style.height = `${length}%`;
   } else {
     style.left = `${offset}%`;
-    style.width = `${length}%`;
+    style.paddingLeft = `${length}%`;
   }
   return <div className={className} style={style} />;
 };

@@ -9,8 +9,7 @@ const Marks = ({ className, vertical, marks, included, upperBound, lowerBound, m
 
   const range = max - min;
   const elements = marksKeys.map(parseFloat).sort((a, b) => a - b).map((point) => {
-    const isActived = (!included && point === upperBound) ||
-            (included && point <= upperBound && point >= lowerBound);
+    const isActived = point === upperBound;
     const markClassName = classNames({
       [`${className}-text`]: true,
       [`${className}-text-active`]: isActived,
